@@ -1,0 +1,23 @@
+Bit -1
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "preLaunchTask": "CMake: build",
+      "sourceFileMap": {
+        "${workspaceFolder}": "${workspaceFolder}"
+      }
+    },
+    {
+      "name": "C/C++ debugger",
+      "type": "cppdbg",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "program": "${command:cmake.buildDirectory}/bin/FreeCAD", 
+      "args": ["${workspaceFolder}/.vscode/scripts/VSCodeAutostartDebug.FCMacro"],
+      "environment": [
+        {
+          "name": "PATH",
+          "value": "${command:cmake.buildDirectory}/bin:${env:PATH}"
+        },
+        {
+          "name": "PYDEVD_DISABLE_FILE_VALIDATION",
+          "value": 
